@@ -1,4 +1,8 @@
 ---
+- name: Set variable prefix when used
+  include_tasks: alias_vars.yml
+  when: ovirt_engine_setup is defined
+
 - name: Install required packages for oVirt Engine deployment
   include_tasks: install_packages.yml
   when: not ovirt_engine_setup_perform_upgrade

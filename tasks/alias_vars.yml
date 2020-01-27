@@ -1,0 +1,38 @@
+---
+- set_fact:
+    ovirt_engine_setup_version: "{{ ovirt_engine_setup['version'] | default(ovirt_engine_setup_version) | default(omit) }}"
+    ovirt_engine_setup_product_type: "{{ ovirt_engine_setup['product_type'] | default(ovirt_engine_setup_product_type) | default(omit) }}"
+    ovirt_engine_setup_package_list: "{{ ovirt_engine_setup['package_list'] | default(ovirt_engine_setup_package_list) | default(omit) }}"
+    ovirt_engine_setup_answer_file_path: "{{ ovirt_engine_setup['answer_file_path'] | default(ovirt_engine_setup_answer_file_path) | default(omit) }}"
+    ovirt_engine_setup_use_remote_answer_file: "{{ ovirt_engine_setup['use_remote_answer_file'] | default(ovirt_engine_setup_use_remote_answer_file) | default(omit) }}"
+    ovirt_engine_setup_fqdn: "{{ ovirt_engine_setup['fqdn'] | default(ovirt_engine_setup_fqdn) | default(omit) }}"
+    ovirt_engine_setup_organization: "{{ ovirt_engine_setup['organization'] | default(ovirt_engine_setup_organization) | default(omit) }}"
+    ovirt_engine_setup_firewall_manager: "{{ ovirt_engine_setup['firewall_manager'] | default(ovirt_engine_setup_firewall_manager) | default(omit) }}"
+    ovirt_engine_setup_update_setup_packages: "{{ ovirt_engine_setup['update_setup_packages'] | default(ovirt_engine_setup_update_setup_packages) | default(omit) }}"
+    ovirt_engine_setup_update_all_packages: "{{ ovirt_engine_setup['update_all_packages'] | default(ovirt_engine_setup_update_all_packages) | default(omit) }}"
+    ovirt_engine_setup_offline: "{{ ovirt_engine_setup['offline'] | default(ovirt_engine_setup_offline) | default(omit) }}"
+    ovirt_engine_setup_require_rollback: "{{ ovirt_engine_setup['require_rollback'] | default(ovirt_engine_setup_require_rollback) | default(omit) }}"
+    ovirt_engine_setup_admin_password: "{{ ovirt_engine_setup['admin_password'] | default(ovirt_engine_setup_admin_password) | default(omit) }}"
+    ovirt_engine_setup_perform_upgrade: "{{ ovirt_engine_setup['perform_upgrade'] | default(ovirt_engine_setup_perform_upgrade) | default(omit) }}"
+    ovirt_engine_setup_wait_running_tasks: "{{ ovirt_engine_setup['wait_running_tasks'] | default(ovirt_engine_setup_wait_running_tasks) | default(omit) }}"
+    ovirt_engine_cinderlib_enable: "{{ ovirt_engine_setup['cinderlib_enable'] | default(ovirt_engine_cinderlib_enable) | default(omit) }}"
+    
+    ovirt_engine_setup_db_host: "{{ ovirt_engine_setup['db']['host'] | default(ovirt_engine_setup_db_host) | default(omit) }}"
+    ovirt_engine_setup_db_port: "{{ ovirt_engine_setup['db']['port'] | default(ovirt_engine_setup_db_port) | default(omit) }}"
+    ovirt_engine_setup_db_name: "{{ ovirt_engine_setup['db']['name'] | default(ovirt_engine_setup_db_name) | default(omit) }}"
+    ovirt_engine_setup_db_user: "{{ ovirt_engine_setup['db']['user'] | default(ovirt_engine_setup_db_user) | default(omit) }}"
+    ovirt_engine_setup_db_password: "{{ ovirt_engine_setup['db']['password'] | default(ovirt_engine_setup_db_password) | default(omit) }}"
+    ovirt_engine_setup_engine_vacuum_full: "{{ ovirt_engine_setup['db']['engine_vacuum_full'] | default(ovirt_engine_setup_engine_vacuum_full) | default(omit) }}"
+    
+    ovirt_engine_setup_dwh_db_configure: "{{ ovirt_engine_setup['dwh_db']['configure'] | default(ovirt_engine_setup_dwh_db_configure) | default(omit) }}"
+    ovirt_engine_setup_dwh_db_host: "{{ ovirt_engine_setup['dwh_db']['host'] | default(ovirt_engine_setup_dwh_db_host) | default(omit) }}"
+    ovirt_engine_setup_dwh_db_port: "{{ ovirt_engine_setup['dwh_db']['port'] | default(ovirt_engine_setup_dwh_db_port) | default(omit) }}"
+    ovirt_engine_setup_dwh_db_name: "{{ ovirt_engine_setup['dwh_db']['name'] | default(ovirt_engine_setup_dwh_db_name) | default(omit) }}"
+    ovirt_engine_setup_dwh_db_user: "{{ ovirt_engine_setup['dwh_db']['user'] | default(ovirt_engine_setup_dwh_db_user) | default(omit) }}"
+    ovirt_engine_setup_dwh_db_password: "{{ ovirt_engine_setup['dwh_db']['password'] | default(ovirt_engine_setup_dwh_db_password) | default(omit) }}"
+    ovirt_engine_setup_dwh_vacuum_full: "{{ ovirt_engine_setup['dwh_db']['vacuum_full'] | default(ovirt_engine_setup_dwh_vacuum_full) | default(omit) }}"
+    
+    ovirt_engine_setup_provider_ovn_configure: "{{ ovirt_engine_setup['provider_ovn']['configure'] | default(ovirt_engine_setup_provider_ovn_configure) | default(omit) }}"
+    ovirt_engine_setup_provider_ovn_username: "{{ ovirt_engine_setup['provider_ovn']['username'] | default(ovirt_engine_setup_provider_ovn_username) | default(omit) }}"
+    ovirt_engine_setup_provider_ovn_password: "{{ ovirt_engine_setup['provider_ovn']['password'] | default(ovirt_engine_setup_provider_ovn_password) | default(omit) }}"
+  no_log: True
